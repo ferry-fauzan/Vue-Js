@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Beginner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 8%;
+            font-family: 'inter';
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="app">
+        <img id="a" src="vue.png" width=80>
+        <h1>{{roar()}}</h1>
+        <h2>{{boolen ?'Vue is Fun' : 'Vue is very Bad'}}</h2>
+        <p>The progressive JS framwork is Vue</p>
+
+        <footer id="footer">
+            <p>Copyright 2020</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let aa = {
+            name: 'Assalamualaikum',
+            kuy: "Haii Fauzan",
+            boolen: true,
+            qty:
+        }
+        let vm = new Vue({
+            el: '#app',
+            data: aa,
+            methods: {
+                roar: function() {
+                    return 'Hello, ' + this.kuy
+                },
+                hoah: function(newName) {
+                    this.name = newName
+                    return 'Hello,' + this.newName
+                        // return this.roar()
+                }
+            },
+            computed: {
+
+            }
+        })
+    </script>
+
+</body>
+
+</html>
